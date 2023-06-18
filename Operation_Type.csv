@@ -1,0 +1,11 @@
+Cost,Duration,_id,operation_name
+3000,2,636d6327a660aae163ac9bd5,EYE surgery
+4000,2,636d63cda660aae163ac9bd6,Ear surgery
+10000,10,636d6489a660aae163ac9bd7,Brain surgery
+5000,5,636d64f7a660aae163ac9bd8,Nose surgery
+3000,3,636d66eaa660aae163ac9bd9,lip surgery
+3500,7,636d67d0a660aae163ac9bda,Leg surgery
+5000,3,636d69a2a660aae163ac9bdb,Hand surgery
+8000,6,636d69c2a660aae163ac9bdc,Knee replacement
+10000,5,636d69e3a660aae163ac9bdd,Heart surgery
+9000,5,636d6a17a660aae163ac9bde,lung surgery

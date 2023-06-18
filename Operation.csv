@@ -1,0 +1,11 @@
+_id,doctor_number,operation_name,patient_number
+636d7406a660aae163ac9bf8,1,Heart surgery,1
+636d752da660aae163ac9bf9,2,Knee surgery,1
+636d7546a660aae163ac9bfa,3,Knee surgery,2
+636d7566a660aae163ac9bfb,4,Leg surgery,3
+636d75afa660aae163ac9bfc,6,Heart surgery,4
+636d75c7a660aae163ac9bfd,7,Eye surgery,5
+636d75eda660aae163ac9bfe,5,ear surgery,5
+636d7633a660aae163ac9bff,8,brain surgery,7
+636d7664a660aae163ac9c00,9,eye surgery,5
+636d768ba660aae163ac9c01,10,lip surgery,9

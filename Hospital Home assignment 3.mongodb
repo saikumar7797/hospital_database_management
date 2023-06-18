@@ -1,0 +1,130 @@
+
+// Collection Claim
+
+use ('Hospital');
+
+db.Claim.insertMany([
+  {'claim_number': 11,'patient_number':11,'company_name':"CVS",'daignosis':'eye surgery','Amount':3000},
+  {'claim_number': 12,'patient_number':12,'company_name':"PSi",'daignosis':'heart surgery','Amount':10000},
+  ]);
+
+  
+  use('Hospital');
+
+  db.Claim.findOne({'claim_number': 11});
+
+
+  use('Hospital');
+
+  db.Claim.updateOne(
+    { 'claim_number' : 12 }, 
+    { $set: {'company_name':"CVS" } },
+    { upsert: true }
+  );
+
+  use('Hospital');
+
+  db.Claim.deleteMany({'claim_number':7});
+
+   // aggregation for Claim Collection
+  use('Hospital');
+  db.Claim.aggregate ( [
+  {
+    $group: { _id : '$patient_number', total_Amount: { $sum: "$Amount" } }
+  }
+]);
+
+
+// Collection Doctor 
+
+use ('Hospital');
+
+db.Doctor.insertMany([
+  {'Doctor_no': 11,'Doctor_name': "KK",'Mobile': "+18136784011",'Doctor_Salary': 6000},
+  {'Doctor_no': 12,'Doctor_name': "LL",'Mobile': "+18136784012",'Doctor_Salary': 7000},
+  ]);
+
+  use('Hospital');
+
+  db.Doctor.findOne({'Doctor_no': 5});
+
+   use ('Hospital');
+  db.Doctor.updateOne(
+    { 'Doctor_no' : 12 }, 
+    { $set: {'Doctor_Salary':7100 } },
+    { upsert: true }
+  );
+
+  use('Hospital');
+
+  db.Doctor.deleteMany({'Doctor_no':11});
+
+
+// Collection Nurse
+
+use('Hospital');
+
+db.Nurse.insertMany([
+  {'Nurse_no': 11,'Nurse_name': "K",'Certification': "Family Nurse Practitioner",'Year_Hired': 2003,'Nurse_salary': 5000},
+  {'Nurse_no': 12,'Nurse_name': "L",'Certification': "Family Nurse Practitioner",'Year_Hired': 2005,'Nurse_salary': 4500},
+  ]);
+
+use('Hospital');
+
+  db.Nurse.findOne({'Nurse_no': 11});
+
+   use ('Hospital');
+  db.Nurse.updateOne(
+    { 'Nurse_no' : 12 }, 
+    { $set: {'Nurse_salary':4800 } },
+    { upsert: true }
+  );
+
+  use('Hospital');
+
+  db.Nurse.deleteMany({'Nurse_no':11});
+
+   // aggregation for Nurse Collection
+  use('Hospital');
+  db.Nurse.aggregate ( [
+  {
+    $group: { _id : '$Certification', total_Salary: { $sum: "$Nurse_salary" } }
+  }
+]);
+
+
+  // Collection Operation Type
+
+  use('Hospital');
+
+db.Operation_Type.insertMany([
+  {"operation_name": "Bone surgery","Duration": 4,"Cost": 2000},
+  {"operation_name": "stomach surgery","Duration": 5,"Cost": 5000},
+  ]);
+
+use('Hospital');
+
+  db.Operation_Type.findOne({'operation_name': "Bone surgery"});
+
+   use ('Hospital');
+  db.Operation_Type.updateOne(
+    { 'operation_name' : "stomach surgery" }, 
+    { $set: {'cost':5100 } },
+    { upsert: true }
+  );
+
+  use('Hospital');
+
+  db.Operation_Type.deleteMany({'operation_name':"Bone surgery"});
+
+  // aggregation for operation type Collection
+  use('Hospital');
+  db.Operation_Type.aggregate ( [
+  {
+    $group: { _id : '$operation_name', total_cost: { $sum: "$Cost" } }
+  }
+]);
+
+
+
+

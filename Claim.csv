@@ -1,0 +1,11 @@
+Amount,_id,claim_number,company_name,daignosis,patient_number
+10000,636d6f10a660aae163ac9be4,1,united health,heart surgery,1
+10000,636d6faca660aae163ac9be5,2,united health,lung surgery,1
+8000,636d6fdaa660aae163ac9be6,3,CVS,Knee replacement,2
+3500,636d700fa660aae163ac9be7,4,CVS,Leg surgery,3
+10000,636d7094a660aae163ac9be8,5,CIGNA,heart surgery,4
+3000,636d70f4a660aae163ac9be9,6,PSI,Eye surgery,5
+4000,636d7127a660aae163ac9bea,7,PSI,Ear surgery,5
+10000,636d7153a660aae163ac9beb,8,CVS,brain surgery,7
+3000,636d7181a660aae163ac9bec,9,PSI,eye surgery,5
+3000,636d71b3a660aae163ac9bed,10,Metropolitan,lip surgery,9
